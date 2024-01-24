@@ -19,3 +19,11 @@ code {
   margin: 0 auto;
   color: #1a1a1a;
 }
+
+svg {
+  fill: #ffbf66;
+}
+
+button svg {
+  display: block;
+}

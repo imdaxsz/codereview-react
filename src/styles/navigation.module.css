@@ -21,10 +21,6 @@
   color: #aaaaaa;
 }
 
-.container svg {
-  fill: #ffbf66;
-}
-
 .container a.active {
   color: #1a1a1a;
 }
