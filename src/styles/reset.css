@@ -136,4 +136,5 @@ q:after {
 button {
   all: unset;
   cursor: pointer;
+  box-sizing: border-box;
 }
