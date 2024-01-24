@@ -9,6 +9,8 @@
       "@hooks/*": ["hooks/*"],
       "@components/*": ["components/*"],
       "@constants/*": ["constants/*"],
+      "@store/*": ["store/*"],
+      "@styles/*": ["styles/*"],
       "@types/*": ["types/*"],
       "@src/*": ["./*"]
     },
