@@ -1,0 +1,51 @@
+.container {
+  padding-top: 64px;
+}
+
+.thumnail {
+  width: 100%;
+  height: 390px;
+  display: block;
+  background: #eee;
+  object-fit: cover;
+}
+
+.content {
+  padding: 12px 12px 50px;
+}
+
+.content > button {
+  width: 100%;
+  display: block;
+  margin-top: 16px;
+}
+
+.info {
+  position: relative;
+}
+
+.info__title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.info__price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ea3800;
+  margin-bottom: 16px;
+}
+
+.info__place,
+.info__date {
+  max-width: calc(100% - 36px);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.info button {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+}
