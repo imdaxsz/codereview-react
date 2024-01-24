@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  height: calc(100dvh - 79px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.container h3,
+.container p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container p {
+  color: #aaa;
+}
