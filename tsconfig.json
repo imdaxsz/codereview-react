@@ -9,7 +9,7 @@
       "@hooks/*": ["hooks/*"],
       "@components/*": ["components/*"],
       "@constants/*": ["constants/*"],
-      "@store/*": ["store/*"],
+      "@stores/*": ["stores/*"],
       "@styles/*": ["styles/*"],
       "@types/*": ["types/*"],
       "@src/*": ["./*"]
