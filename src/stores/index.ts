@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import wishlistReducer from './wishlistSlice';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    wishlist: wishlistReducer,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
