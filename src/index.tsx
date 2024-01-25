@@ -4,13 +4,17 @@ import '@styles/global.css';
 import Router from './Router';
 import reportWebVitals from './reportWebVitals';
 import { HelmetProvider } from 'react-helmet-async';
+import { Provider } from 'react-redux';
+import { store } from 'stores';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <HelmetProvider>
-      <Router />
-    </HelmetProvider>
+    <Provider store={store}>
+      <HelmetProvider>
+        <Router />
+      </HelmetProvider>
+    </Provider>
   </React.StrictMode>,
 );
 
