@@ -1,9 +1,9 @@
-import React from 'react';
-import Home from '@pages/Home';
+import React, { lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Wishlist from '@pages/Wishlist';
-import Booking from '@pages/Booking';
+import Home from '@pages/Home';
 import Layout from '@components/Layout';
+const Booking = lazy(() => import('@pages/Booking'));
+const Wishlist = lazy(() => import('@pages/Wishlist'));
 
 function Router() {
   return (
