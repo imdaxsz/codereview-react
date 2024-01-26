@@ -4,10 +4,9 @@ import { Exhibition } from 'types';
 
 export default function useExhibitions() {
   const [exhibitions, setExhibitions] = useState<Exhibition[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchList = async () => {
-    setIsLoading(true);
     try {
       const res = await getApiExhibitionList();
       setExhibitions(res);
