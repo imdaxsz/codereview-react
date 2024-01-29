@@ -1,5 +1,5 @@
 import styles from '@styles/modal.module.css';
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
 interface Props extends PropsWithChildren {
@@ -8,6 +8,21 @@ interface Props extends PropsWithChildren {
 
 export default function Modal({ onClose, children }: Props) {
   const container = document.getElementById('modal');
+
+  // 모달 외부 화면 스크롤 방지
+  useEffect(() => {
+    document.body.style.cssText = `
+    position: fixed; 
+    top: -${window.scrollY}px;
+    overflow-y: ${window.innerWidth - document.body.clientWidth > 0 ? 'scroll' : 'hidden'};
+    width: 100%;`;
+    return () => {
+      const scrollY = document.body.style.top;
+      document.body.style.cssText = '';
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    };
+  }, []);
+
   return (
     container &&
     createPortal(
