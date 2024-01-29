@@ -2,11 +2,10 @@ import Empty from '@components/Empty';
 import Head from '@components/Head';
 import ListItem from '@components/ListItem';
 import { useAppSelector } from '@stores/index';
-import { wishlist } from '@stores/wishlistSlice';
 import styles from '@styles/list.module.css';
 
 export default function Wishlist() {
-  const list = useAppSelector(wishlist);
+  const list = useAppSelector((state) => state.wishlist.items);
 
   return (
     <div className={styles.container}>
