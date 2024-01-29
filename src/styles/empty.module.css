@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  height: calc(100dvh - 79px);
+  height: calc(100dvh - 88px);
   display: flex;
   flex-direction: column;
   justify-content: center;
