@@ -7,7 +7,7 @@ import Empty from '@components/Empty';
 import Loader from '@components/Loader';
 
 export default function Home() {
-  const { exhibitions, isLoading } = useExhibitions();
+  const { exhibitions, isLoading, target } = useExhibitions();
 
   return (
     <div className={styles.container}>
@@ -17,6 +17,7 @@ export default function Home() {
       {exhibitions.map((item) => (
         <ListItem item={item} key={item.id} />
       ))}
+      <div ref={target} />
     </div>
   );
 }
