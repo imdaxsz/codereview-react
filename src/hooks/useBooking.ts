@@ -33,5 +33,5 @@ export default function useBooking() {
     fetchData(Number(id));
   }, [id]);
 
-  return { data, isLoading, isError };
+  return { data, isLoading, setIsLoading, isError };
 }
