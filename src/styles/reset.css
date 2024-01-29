@@ -138,3 +138,7 @@ button {
   cursor: pointer;
   box-sizing: border-box;
 }
+
+button:disabled {
+  cursor: default;
+}
