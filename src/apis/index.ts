@@ -1,13 +1,16 @@
 import { dummyExhibitionList } from '@assets/dummy/exhibitionList';
+import mockResponse1 from '@assets/dummy/exhibitionList.json';
+import mockResponse2 from '@assets/dummy/exhibitionList2.json';
 import { sleep } from '@utils/sleep';
 
 // 전시회 리스트 불러오기 API
-export const getApiExhibitionList = async () => {
-  const response = [...dummyExhibitionList];
+export const getApiExhibitionList = async ({ nextPage }: { nextPage: string | null }) => {
+  // const response = [...dummyExhibitionList];
 
   await sleep({ ms: 1000 });
 
-  return response;
+  // return response;
+  return nextPage === '9' ? mockResponse2 : mockResponse1;
 };
 
 // 전시회 상세 불러오기 API
