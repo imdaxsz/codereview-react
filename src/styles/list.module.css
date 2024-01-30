@@ -37,7 +37,7 @@
 }
 
 .item__content {
-  width: 100%;
+  width: calc(100% - 90px);
 }
 
 .item__info {
@@ -52,6 +52,14 @@
 .item__place {
   font-size: 12px;
   color: #999;
+}
+
+.item__title,
+.item__place {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
 }
 
 .item__price {
