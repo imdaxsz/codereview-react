@@ -43,8 +43,8 @@ export default function Booking() {
 
   return (
     <div className={styles.container}>
-      <Head title="예매하기 | Exhibition" />
-      <Header title="예매하기" />
+      <Head title='예매하기 | Exhibition' />
+      <Header title='예매하기' />
       {isLoading && <Loader />}
       {data && (
         <>
@@ -57,9 +57,9 @@ export default function Booking() {
               <p className={styles.info__date}>
                 {data.date.started} ~ {data.date.ended}
               </p>
-              <WishButton item={data} size="lg" />
+              <WishButton item={data} size='lg' />
             </div>
-            <button className="btn btn-primary btn-lg" aria-label="예매하기" onClick={onClickBook}>
+            <button className='btn btn-primary btn-lg' aria-label='예매하기' onClick={onClickBook}>
               예매하기
             </button>
           </div>

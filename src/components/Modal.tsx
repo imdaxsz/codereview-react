@@ -26,8 +26,8 @@ export default function Modal({ onClose, children }: Props) {
   return (
     container &&
     createPortal(
-      <div className={styles.backdrop} onClick={onClose} role="dialog">
-        <div className={styles.container} role="document" onClick={(e) => e.stopPropagation()}>
+      <div className={styles.backdrop} onClick={onClose} role='dialog'>
+        <div className={styles.container} role='document' onClick={(e) => e.stopPropagation()}>
           {children}
         </div>
       </div>,

@@ -13,7 +13,7 @@ export default function ListItem({ item }: ItemProps) {
 
   return (
     <div className={styles.item__container}>
-      <img className={styles.item__thumnail} src={item.imageUrl} alt="img" />
+      <img className={styles.item__thumnail} src={item.imageUrl} alt='img' />
       <div className={styles.item__content}>
         <div className={styles.item__info__wrapper}>
           <div className={styles.item__info}>

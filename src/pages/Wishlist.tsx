@@ -9,12 +9,12 @@ export default function Wishlist() {
   const { target, wishlist, isLoading } = useWishlist();
   return (
     <div className={styles.container}>
-      <Head title="찜목록 | Exhibition" />
+      <Head title='찜목록 | Exhibition' />
       {isLoading && <Loader />}
       {!isLoading && wishlist.length === 0 && (
         <Empty
-          message="찜해놓은 전시회가 없습니다"
-          suggestion="맘에 드는 전시회가 있다면 찜해보세요"
+          message='찜해놓은 전시회가 없습니다'
+          suggestion='맘에 드는 전시회가 있다면 찜해보세요'
         />
       )}
       {wishlist.map((item) => (

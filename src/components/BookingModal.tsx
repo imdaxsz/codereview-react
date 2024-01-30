@@ -31,16 +31,16 @@ export default function BookingModal({
           </Modal.Content>
           <Modal.Action>
             <button
-              aria-label="확인"
-              className="btn btn-primary btn-md"
+              aria-label='확인'
+              className='btn btn-primary btn-md'
               disabled={isLoading}
               onClick={onBook}
             >
               확인
             </button>
             <button
-              aria-label="취소"
-              className="btn btn-neutral btn-md"
+              aria-label='취소'
+              className='btn btn-neutral btn-md'
               disabled={isLoading}
               onClick={onClose}
             >
@@ -55,7 +55,7 @@ export default function BookingModal({
             <div className={styles.modal__content}>예매가 완료되었습니다</div>
           </Modal.Content>
           <Modal.Action>
-            <button aria-label="확인" className="btn btn-primary btn-md" onClick={onClickOk}>
+            <button aria-label='확인' className='btn btn-primary btn-md' onClick={onClickOk}>
               확인
             </button>
           </Modal.Action>

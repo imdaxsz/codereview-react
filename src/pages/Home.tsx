@@ -13,7 +13,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head />
       {isLoading && <Loader />}
-      {exhibitions.length === 0 && !isLoading && <Empty message="예매 가능한 전시회가 없습니다" />}
+      {exhibitions.length === 0 && !isLoading && <Empty message='예매 가능한 전시회가 없습니다' />}
       {exhibitions.map((item) => (
         <ListItem item={item} key={item.id} />
       ))}
