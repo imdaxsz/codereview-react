@@ -6,7 +6,7 @@ export default function Header({ title }: { title: string }) {
 
   return (
     <div className="header">
-      <button name="뒤로가기" onClick={() => navigate(-1)}>
+      <button aria-label="뒤로가기" onClick={() => navigate(-1)}>
         <ArrowUUpLeft size={30} weight="fill" />
       </button>
       <h3>{title}</h3>

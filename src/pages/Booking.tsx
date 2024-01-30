@@ -57,11 +57,11 @@ export default function Booking() {
               <p className={styles.info__date}>
                 {data.date.started} ~ {data.date.ended}
               </p>
-              <button name="찜하기">
+              <button aria-label="찜하기">
                 <Star size={32} />
               </button>
             </div>
-            <button className="btn btn-primary btn-lg" name="예매하기" onClick={onClickBook}>
+            <button className="btn btn-primary btn-lg" aria-label="예매하기" onClick={onClickBook}>
               예매하기
             </button>
           </div>
