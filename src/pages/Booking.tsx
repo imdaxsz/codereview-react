@@ -2,9 +2,9 @@ import BookingModal from '@components/BookingModal';
 import Head from '@components/Head';
 import Header from '@components/Header';
 import Loader from '@components/Loader';
+import WishButton from '@components/WishButton';
 import useBooking from '@hooks/useBooking';
 import useModal from '@hooks/useModal';
-import { Star } from '@phosphor-icons/react';
 import styles from '@styles/booking.module.css';
 import { sleep } from '@utils/sleep';
 import { useNavigate } from 'react-router-dom';
@@ -20,7 +20,7 @@ export default function Booking() {
   const { isOpen: isAlertModalOpen, open: openAlertModal, close: closeAlertModal } = useModal();
 
   if (isError) {
-    window.alert('해당 전시회를 찾을 수 없습니다. 다시 확인 후 조회하여 주십시오.');
+    window.alert('해당 전시회를 찾을 수 없습니다. 다시 확인 후 조회해 주세요.');
     navigate('/', { replace: true });
   }
 
@@ -57,9 +57,7 @@ export default function Booking() {
               <p className={styles.info__date}>
                 {data.date.started} ~ {data.date.ended}
               </p>
-              <button aria-label="찜하기">
-                <Star size={32} />
-              </button>
+              <WishButton item={data} size="lg" />
             </div>
             <button className="btn btn-primary btn-lg" aria-label="예매하기" onClick={onClickBook}>
               예매하기
