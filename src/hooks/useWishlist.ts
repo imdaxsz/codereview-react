@@ -16,7 +16,10 @@ export default function useWishlist() {
 
   // FETCH_SIZE(=8) 단위로 찜 목록을 불러옵니다.
   const fetchList = useCallback(async () => {
-    if (list.length === 0) return;
+    if (list.length === 0) {
+      setIsLoading(false);
+      return;
+    }
     setIsLoading(true);
     const start = wishlist.length;
     const nextItems = list.slice(start, start + FETCH_SIZE);
